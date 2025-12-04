@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "poolUp",
+    "slug": "Loop",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/adaptive-icon.png",
+    "scheme": "poolup",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.outhills.Loop",
+      "buildNumber": "1",
+      "infoPlist": {
+        "CFBundleDisplayName": "poolUp",
+        "NSLocationWhenInUseUsageDescription": "poolUp needs access to your location to find nearby rides and track your journey.",
+        "NSLocationAlwaysUsageDescription": "poolUp needs access to your location to track rides in the background for driver and passenger safety.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "poolUp needs access to your location to find nearby rides and track your journey."
+      },
+      "associatedDomains": ["applinks:loop.app"],
+      "icon": "./assets/icons/ios-light.png"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "config": {
+        "googleMaps": {
+          "apiKey": "EXPO_PUBLIC_GOOGLE_API_KEY"
+        }
+      },
+      "package": "com.outhills.Loop",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "loop.app",
+              "pathPrefix": "/ride"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location to find nearby rides."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#F97316",
+          "defaultChannel": "default",
+          "sounds": [
+            "./assets/sounds/notification.wav"
+          ]
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ee92abca-ffe6-4976-9cb8-f5be6d84a5ce"
+      }
+    },
+    "owner": "outhills"
+  }
+}
