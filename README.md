@@ -1,50 +1,166 @@
-# Welcome to your Expo app 👋
+Loop Platform
+=============
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Loop is a college rideshare platform that connects university students for safe,
+verified carpooling. Built with React Native, it provides real-time ride matching,
+fare splitting, and community-focused features for campus transportation.
 
-## Get started
+Quick Start
+-----------
 
-1. Install dependencies
+* Report issues: https://github.com/wahab-cide/poolUp/issues
+* Get the code: git clone https://github.com/wahab-cide/poolUp.git
+* Install deps: npm install
+* Run mobile: npx expo start
+* View docs: See CLAUDE.md
 
-   ```bash
-   npm install
-   ```
+Essential Documentation
+-----------------------
 
-2. Start the app
+All contributors should be familiar with:
 
-   ```bash
-   npx expo start
-   ```
+* Project Overview: PROJECT_OVERVIEW.md
+* Development Guide: CLAUDE.md
+* Social Features: SOCIAL_FEATURES_ROADMAP.md
+* License: MIT
 
-In the output, you'll find options to open the app in a
+Documentation for components and APIs can be found in the CLAUDE.md file.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Who Are You?
+============
 
-## Get a fresh project
+Find your role below:
 
-When you're ready, run:
+* New Developer - Getting started with the codebase
+* Mobile Developer - React Native and Expo development
+* Backend Developer - API integration and data flow
+* Designer/Product - Understanding features and UX
+* DevOps Engineer - Deployment and infrastructure
+* Contributor - Contributing fixes and features
 
-```bash
-npm run reset-project
-```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+For Specific Users
+==================
 
-## Learn more
+New Developer
+-------------
 
-To learn more about developing your project with Expo, look at the following resources:
+Welcome! Start your Loop development journey here:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* Getting Started: CLAUDE.md - Complete setup guide
+* Project Structure: PROJECT_OVERVIEW.md - App architecture
+* Environment Setup: Create .env with required API keys
+* Run Development: npx expo start
+* Development Tools: Expo DevTools at localhost:8081
+* Git Workflow: Feature branches, pull requests
+* Testing: npm run lint for ESLint checks
 
-## Join the community
+Mobile Developer
+----------------
 
-Join our community of developers creating universal apps.
+Work with React Native and Expo features:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* App Architecture: CLAUDE.md - File-based routing with Expo Router
+* Component Library: components/ - Reusable UI components
+* Navigation: Expo Router v6 - app/ directory routing
+* Styling: NativeWind (TailwindCSS) - global.css and tailwind.config.js
+* State Management: Zustand - store/index.ts
+* Maps Integration: react-native-maps with Google Places
+* Push Notifications: hooks/useNotifications.ts
+* Theme System: contexts/ThemeContext.tsx
+
+Backend Developer
+-----------------
+
+Integrate with the Loop API and manage data flow:
+
+* API Communication: lib/fetch.ts - fetchAPI wrapper
+* Authentication: Clerk SDK - lib/auth.ts
+* Database Schema: database/schema.sql
+* Payment Processing: Stripe - components/Payment.tsx
+* Real-time Features: Chat polling, location updates
+* Data Types: types/type.d.ts - TypeScript interfaces
+* Environment Config: lib/environment.ts
+
+Designer/Product
+----------------
+
+Understand features and user experience:
+
+* Feature Overview: PROJECT_OVERVIEW.md
+* Social Features: SOCIAL_FEATURES_ROADMAP.md - Crews, events, communities
+* User Flows: Booking, posting rides, fare splitting
+* Dark Mode: Theme toggle with system preference
+* Component Library: components/ - UI patterns
+* Onboarding: app/(root)/onboarding.tsx
+* Verification System: College email and driver documents
+
+DevOps Engineer
+---------------
+
+Deploy and maintain Loop infrastructure:
+
+* Web Deployment: Vercel - vercel.json configuration
+* CI/CD: GitHub Actions - .github/workflows/ci.yml
+* Mobile Builds: EAS Build - eas.json configuration
+* Environment Variables: Clerk, Stripe, Google Maps API keys
+* Monitoring: Vercel Analytics and logs
+* Native Builds: Android and iOS configuration in android/ and ios/
+
+Contributor
+-----------
+
+Contribute fixes and features to Loop:
+
+* Code Style: Follow ESLint config - eslint.config.js
+* TypeScript: Strict mode enabled - tsconfig.json
+* Branch Strategy: Feature branches from main
+* Pull Requests: Clear description, link issues
+* Testing: Run npm run lint before commits
+* Documentation: Update CLAUDE.md for significant changes
+* Commit Messages: Conventional commits (feat:, fix:, chore:)
+
+
+Tech Stack
+==========
+
+Mobile Application
+------------------
+
+* Framework: React Native 0.81 with Expo 54
+* Language: TypeScript 5.9 (strict mode)
+* Navigation: Expo Router 6 (file-based routing)
+* Styling: NativeWind 4 (TailwindCSS for React Native)
+* State: Zustand 5 for global state
+* Maps: react-native-maps with Google Places
+* Auth: Clerk Expo SDK
+
+Backend Integration
+-------------------
+
+* API: Loop API (separate repository - loop-api)
+* Database: PostgreSQL (Neon serverless)
+* Payments: Stripe with Stripe Connect
+* Notifications: Expo Push Notifications
+* Real-time: Polling-based updates
+
+Development Tools
+-----------------
+
+* Build: Metro bundler (Expo default)
+* Linting: ESLint 9 with Prettier
+* Type Checking: TypeScript compiler
+* Version Control: Git with GitHub
+* CI/CD: GitHub Actions
+* Deployment: Vercel (web), EAS (mobile)
+
+
+Communication and Support
+=========================
+
+* Issues: https://github.com/wahab-cide/poolUp/issues
+* Documentation: CLAUDE.md in repository
+* Project Board: GitHub Projects
+* Code Review: Pull request discussions
+* Development: Expo community forums and documentation
